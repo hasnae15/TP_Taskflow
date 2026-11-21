@@ -1,0 +1,41 @@
+
+<header class="header">
+
+  <h1>{{ title() }}</h1>
+
+  <div class="header-actions">
+
+    <button (click)="rename()">
+      Renommer
+    </button>
+
+    <button [disabled]="!canDelete()" (click)="deleteAll()">
+      Supprimer
+    </button>
+
+  </div>
+
+</header>
+
+<aside class="navigation">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#tasks">Tasks</a>
+</aside>
+
+<main>
+
+  <section id="home">
+    <app-home></app-home>
+  </section>
+
+  <section id="about">
+    <app-about></app-about>
+  </section>
+
+  <section id="tasks">
+    <app-task-list />
+  </section>
+
+</main>
+
